@@ -1,6 +1,8 @@
 let services = document.getElementById('services');
 let works = document.getElementById('works');
 let more = document.getElementById('moreWorksImages');
+let worksPhoto = document.getElementById('worksPhoto');
+let amazing = document.getElementById('amazing');
 
 services.addEventListener('click', changeServicesText);
 works.addEventListener('click', changeWorksImage);
@@ -59,7 +61,13 @@ function changeWorksImage(e) {
 }
 
 function loadMoreImages() {
-	console.log(this);
+	let a = worksPhoto.cloneNode(true);
+	for (let i = 0; i < a.children.length; i++){
+		worksPhoto.appendChild(a.children[i]);
+		
+	}
+	/*console.dir(a);
+	*/
 }
 
 
