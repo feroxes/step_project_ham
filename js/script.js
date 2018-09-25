@@ -47,48 +47,44 @@ function changeWorksImage(e) {
         }
         e.target.id = 'active_work';
         console.dir(e);
-        for (let j = 0; j < works.nextElementSibling.children.length; j++){
-        	if (works.nextElementSibling.children[j].className == e.target.innerHTML.replace(/\s+/g,'')){
-        		works.nextElementSibling.children[j].style.display = 'block';
-        	}else if (e.target.innerHTML == 'All'){
-        		works.nextElementSibling.children[j].style.display = 'block';
-        	}
-        	else{
-        		works.nextElementSibling.children[j].style.display = 'none';
-        	}
+        for (let j = 0; j < works.nextElementSibling.children.length; j++) {
+            if (works.nextElementSibling.children[j].className == e.target.innerHTML.replace(/\s+/g, '')) {
+                works.nextElementSibling.children[j].style.display = 'block';
+            } else if (e.target.innerHTML == 'All') {
+                works.nextElementSibling.children[j].style.display = 'block';
+            } else {
+                works.nextElementSibling.children[j].style.display = 'none';
+            }
         }
     }
 }
 
 function loadMoreImages() {
-	let a = worksPhoto.cloneNode(true);
-	for (let i = 0; i < a.children.length; i++){
-		worksPhoto.appendChild(a.children[i]);
-		
-	}
-	/*console.dir(a);
-	*/
+    let a = Array.from(worksPhoto.cloneNode(true).children);
+    for (let i = 0; i < a.length; i++) {
+        worksPhoto.appendChild(a[i]);
+    }
+    more.style.display = 'none';
 }
 
 
 
+ $('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 2,
+  asNavFor: '.slider-for',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true
+});
+ 
 
 
