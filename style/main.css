@@ -632,7 +632,7 @@
  }
 
  .slider-for {
-width: 1140px;
+    width: 1140px;
     margin-left: 280px;
 
  }
@@ -673,6 +673,7 @@ width: 1140px;
  .slider-nav div {
     padding: 0 0 0 30px;
  }
+
 .slick-prev, .slick-next {
     width: 200px;
 }

@@ -79,7 +79,7 @@ function loadMoreImages() {
 
 $('.slider-nav').slick({
   slidesToShow: 3,
-  slidesToScroll: 2,
+  slidesToScroll: 1,
   asNavFor: '.slider-for',
   dots: false,
   centerMode: false,
