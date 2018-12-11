@@ -1,4 +1,4 @@
-# Ham
+# The Ham Step Project
 
 Landing page is made only for widescreen monitors, with a screen width of more than 1200 pixels.<br>
 Using HTML, CSS, JS, <a href="http://kenwheeler.github.io/slick/">Slick</a>.
